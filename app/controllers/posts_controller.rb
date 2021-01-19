@@ -1,8 +1,7 @@
 class PostsController < ApplicationController
+  
   def index
-  end
-
-  def new 
+    @posts = Post.all.order(id: "DESC")
   end
 
   def create
